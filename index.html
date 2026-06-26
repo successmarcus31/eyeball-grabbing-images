@@ -248,7 +248,7 @@ figure.ex figcaption b{color:var(--ink);font-weight:600}
   <div class="nav">
     <div class="nav-quick">
       <button class="qlink" id="homeBtn">&#8962; Title</button>
-      <button class="qlink" id="summaryBtn">Summary &#10515;</button>
+      <button class="qlink" id="summaryBtn">Takeaway &#10515;</button>
       <button class="qlink" id="promptBtn">Copy-paste prompt</button>
     </div>
     <div class="nav-main">
@@ -292,14 +292,14 @@ var IMGDATA = {"example-01.png": "data:image/webp;base64,UklGRrBPAABXRUJQVlA4IKR
 /* The full ad-image copy prompt, verbatim from the chapter's companion tool. */
 var COPY_PROMPT =
 "Generate me an image to go with this ad. Make the copy follow this simple formula:\n\n" +
-"HEADLINE: Create one version that focuses on the symptoms of the problem our ad promises to solve, and another version focusing on the benefit it promises to deliver. Make sure both versions describe the symptoms OR the benefit in language that the audience would use to describe it in their imagination or in a conversation with friends.\n\n" +
-"SUBHEADER: Start this sentence telling the reader exactly what they'll get from following the call to action in the ad (the deliverable, i.e., free video, workshop, course, etc). Include a mysterious hint about how this thing will either solve the symptoms of the problem, or deliver the benefit.\n\n" +
-"CALL TO ACTION: a clear and concise call to action telling the reader EXACTLY what to do (i.e., \"Click Here to ___\") to get the deliverable in the subheader. Put all the copy in title case.\n\n" +
+"- HEADLINE: Create one version that focuses on the symptoms of the problem our ad promises to solve, and another version focusing on the benefit it promises to deliver. Make sure both versions describe the symptoms OR the benefit in a language that the audience would use to describe it in their imagination or in a conversation with friends.\n\n" +
+"- SUBHEADER: Start this sentence telling the reader exactly what they'll get from following the call to action in the ad (the deliverable, i.e., free video, workshop, course, etc). Make include a mysterious hint about how this thing will either solve the symptoms of the problem, or deliver the benefit.\n\n" +
+"- CALL TO ACTION: a clear and concise call to action telling the reader EXACTLY what to do (i.e., \"Click Here to___\") to get the deliverable in the subheader. Put all the copy in title case:\n\n" +
 "HEADLINE LENGTH: 20 to 25 characters.\n" +
 "SUBHEADER LENGTH: 30 to 35 characters.\n" +
 "CALL TO ACTION: 20 to 25 characters.\n\n" +
 "Please count the character lengths of each of the above and include them in parentheses.\n\n" +
-"Once I've approved the copy, please ask me if I'm ready to generate the images for each version. If I agree, please create the image for the symptom version first and get my approval on it. Once I've approved this image, generate the image for the benefit version. DO NOT include any words in these images.";
+"Once I've approved the copy. Please ask me if I'm ready to generate the images for each version. If I agree, please create the image for the symptom version first and get my approval on it. Once I've approved this image, generate the image for the benefit version. DO NOT include any words in these images.";
 
 /* ---- slide model ---------------------------------------------------------
    Each slide is one step in the deck. 'rule' marks which of the 7 rules a
@@ -315,97 +315,93 @@ function img(file, kind, ruleLabel, alt, capLead, cap){
   };
 }
 
-/* 0. TITLE */
+/* n1. TITLE */
 slides.push({rule:0, step:"Start", title:"Eyeball-Grabbing Images", html:
   '<div class="screen title-screen">' +
     '<div class="eyebrow">Bonus Chapter III</div>' +
     '<h1><em>Eyeball-Grabbing</em><br>Images</h1>' +
-    '<p class="promise">Five principles for making an image demand attention and guide the eye exactly where you want it to go.</p>' +
+    '<p class="promise">Leveraging Gestalt psychology to make your thumbnails, ad images, and social media visuals DEMAND attention and guide the viewer\'s eye EXACTLY where you want it to go.</p>' +
     '<div class="title-mark"><span class="dot"></span> A Quiet Authority lesson &middot; vqsuccess.com</div>' +
   '</div>'});
 
-/* 1. INTRO / THESIS */
-slides.push({rule:0, step:"Why this works", title:"Most marketers get this dead wrong", html:
+/* n2. INTRO / THESIS */
+slides.push({rule:0, step:"The big idea", title:"Most marketers get it DEAD WRONG", html:
   '<div class="screen">' +
-    '<div class="kicker">Why this works</div>' +
-    '<h2>Most marketers get images <em>dead wrong</em></h2>' +
-    '<p class="lead big">They obsess over aesthetics, brand colors, and looking professional, instead of how the eye actually processes an image. The eye does not read an image the way a designer hopes it will. It reads it in a fixed order, fast, on instinct.</p>' +
-    '<p class="lead">This chapter uses <b>Gestalt psychology</b> to make your thumbnails, ad images, and social visuals demand attention and send the eye exactly where you want it to go.</p>' +
-    '<div class="aside-card"><span class="tag">The whole idea in one line</span><p>If your ad is not instantly clear, it is a dud, however pretty it looks. <b>Pretty does not sell. Psychology sells.</b></p></div>' +
+    '<div class="kicker">The big idea</div>' +
+    '<h2>Most marketers get it <em>DEAD WRONG</em></h2>' +
+    '<p class="lead big">When it comes to grabbing attention with images, most marketers and designers get it DEAD WRONG. They obsess over aesthetics, branding colors, and "looking professional" instead of understanding how the human eye ACTUALLY processes visual information.</p>' +
+    '<p class="lead">This chapter is about leveraging <b>Gestalt psychology</b> to make your thumbnails, ad images, and social media visuals DEMAND attention and guide the viewer\'s eye EXACTLY where you want it to go.</p>' +
+    '<div class="aside-card"><span class="tag">The pull</span><p><b>Pretty doesn\'t sell. Psychology sells.</b></p></div>' +
   '</div>'});
 
-/* ===================== PRINCIPLE 1: Human faces ===================== */
-slides.push({rule:1, step:"Principle 1 intro", title:"Principle 1: Human faces", html:
+/* ===================== PRINCIPLE 1: Human Faces ===================== */
+slides.push({rule:1, step:"Principle 1 intro", title:"Human Faces: The Ultimate Attention Magnet", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 1 of 5</div>' +
-    '<h2>Human faces: the <em>ultimate attention magnet</em></h2>' +
-    '<p class="lead">The brain is wired to find faces fast, and to follow where a face looks or points. Aim that pull at your most important message.</p>' +
-    '<div class="sci"><span class="tag">The science</span>' +
-      '<p>The brain detects a face in as little as <b>100 milliseconds</b>, through a dedicated region called the <b>fusiform face area (FFA)</b>.</p>' +
-    '</div>' +
+    '<h2>Human Faces: <em>The Ultimate Attention Magnet</em></h2>' +
+    '<p class="lead">The human brain is wired to recognize and respond to faces, FAST. Our brains detect faces in as little as <b>100 milliseconds</b> because of the <b>fusiform face area (FFA)</b>, a specialized part of the brain dedicated to facial recognition. That\'s why:</p>' +
     '<div class="kpis">' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Faces get more engagement</span><span class="s">Ads with human faces pull more attention than those without.</span></span></div>' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Eyes looking at text</span><span class="s">A gaze aimed at the headline or call to action raises reading rates.</span></span></div>' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Pointing gestures</span><span class="s">A point amplifies attention and steers focus where you want it.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="s">Ads with human faces get more engagement than those without.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="s">Eyes looking at text (especially headlines or CTAs) increase reading rates.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="s">Pointing gestures amplify attention and guide the viewer\'s focus.</span></span></div>' +
     '</div>' +
-    '<p class="lead">The highest-converting ads often show someone pointing at the headline, because the eye follows where others look or point.</p>' +
+    '<p class="lead">Ever wonder why some of the highest-converting ads feature someone pointing at the headline? Our eyes follow where others are looking or pointing. Use this to direct attention to your most important message.</p>' +
   '</div>'});
 
 slides.push(img("example-13.png","neutral","Principle 1 &middot; Faces that guide, faces that distract",
   "A combined good-and-bad board titled \"Use Human Faces To Guide Attention\". The top row shows people looking at or pointing toward the headline; the bottom row shows the same ads where the face looks away, with notes such as \"no eye contact, no direction\".",
   "Right on top, wrong below.",
-  "Top row: the face looks at or points to the headline, so the viewer follows the same path. Bottom row: the face looks away with no connection to the copy, and the pull is wasted. A running recap of the principles so far sits along the base."));
+  "Top row: the face looks at or points to the headline, so the viewer follows the same path. Bottom row: the face looks away with no connection to the copy, and the pull is wasted."));
 
-/* ===================== PRINCIPLE 2: Contrasts (shape & color) ===================== */
-slides.push({rule:2, step:"Principle 2 intro", title:"Principle 2: Contrasts, shape and color", html:
+/* ===================== PRINCIPLE 2: Contrasts ===================== */
+slides.push({rule:2, step:"Principle 2 intro", title:"Contrasts: Shape & Color Over Branding Nonsense", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 2 of 5</div>' +
-    '<h2>Contrast over <em>branding nonsense</em></h2>' +
-    '<p class="lead">If you put brand consistency ahead of contrast, you are burning money. Contrast in shape and color is what makes an ad stand out in a sea of visual noise.</p>' +
-    '<p class="lead">Forget whether an ad fits your brand. If people do not <b>notice</b> it, they are not going to <b>buy</b> from it.</p>' +
+    '<h2>Contrasts: <em>Shape &amp; Color Over Branding Nonsense</em></h2>' +
+    '<p class="lead big">If you\'re prioritizing "brand consistency" over contrast, you\'re burning money.</p>' +
+    '<p class="lead">Contrast (especially in shape and color) is what makes your ad stand out in a sea of visual noise. Forget about whether an ad "fits your brand." If people don\'t NOTICE it, they\'re not going to BUY from it.</p>' +
   '</div>'});
 
-slides.push({rule:2, step:"Principle 2 story", title:"The million-dollar odd shape", html:
+slides.push({rule:2, step:"Principle 2 story", title:"The Million-Dollar \"Odd Shape\" Trick", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 2 of 5</div>' +
-    '<h2>The million-dollar <em>odd shape</em></h2>' +
-    '<p class="lead big">Early in his career, Czerepak helped a client make millions from a tiny black-and-white ad in the classified section of a print magazine. The secret was a single weird star-shaped seal in the middle of it.</p>' +
-    '<p class="lead">Every other ad in that section was just lines and boxes. The odd shape broke the pattern and demanded attention.</p>' +
-    '<div class="aside-card"><span class="tag">The lesson</span><p>When your ad looks like everything else, it gets ignored. <b>The eye is drawn to what is different.</b></p></div>' +
+    '<h2>The Million-Dollar <em>"Odd Shape"</em> Trick</h2>' +
+    '<p class="lead big">Early in my career, I helped a client make millions by running a tiny black-and-white ad in the back of a print magazine\'s classified section. The secret? We added a weird star-shaped seal in the middle of the ad. Why? Because EVERY other ad was just lines and boxes. The odd shape broke the pattern and demanded attention.</p>' +
+    '<div class="aside-card"><span class="tag">The lesson</span><p>When your ad looks like everything else, it gets ignored. <b>The human eye is drawn to what\'s different.</b></p></div>' +
   '</div>'});
 
 slides.push(img("example-10.png","right","Principle 2 &middot; Color that respects the order",
   "A four-panel grid of color ads where each headline sits on a high-contrast background, such as white text over a dark image and dark text over a light panel, keeping the headline the clear focal point.",
   "Color, used to lift the headline.",
-  "Color enters here, but it serves the message: each headline sits on a background it clearly stands against, so adding color makes the lead element pop instead of competing with it."));
+  "Each headline sits on a background it clearly stands against, so adding color makes the lead element pop instead of competing with it."));
 
-slides.push(img("example-11.png","wrong","Principle 2 &middot; Contrast breaks down",
+slides.push(img("example-11.png","wrong","Principle 2 &middot; Contrast breaks the hierarchy",
   "A four-panel grid labeled \"Wrong Examples: Contrast Breaks The Hierarchy\", showing low-contrast headlines and panels crowded with too many bright colors, with red X marks and notes such as \"Nothing stands out\".",
   "All present, none clear.",
-  "Headline, offer, and call to action are all there, yet pale text on busy backgrounds and too many competing colors leave the eye with no clear first stop. Nothing stands out, so nothing gets noticed."));
+  "Headline, offer, and call to action are all there and sized right, yet pale text on busy backgrounds and too many competing colors leave the eye with no clear first stop."));
 
 slides.push(img("example-12.png","wrong","Principle 2 &middot; The wrong thing pops",
   "A four-panel grid titled \"Contrast Breaks The Hierarchy\", each panel with a red X and a \"Why it's wrong\" note explaining that the headline blends in or the call to action uses the strongest contrast and steals attention.",
   "Contrast aimed at the wrong target.",
-  "The per-panel notes spell out the failure: when the call to action carries the highest contrast, it becomes the first thing seen, so the eye skips the value and the order collapses."));
+  "When the call to action carries the highest contrast, it becomes the first thing seen, so the eye skips the value and the order collapses."));
 
 slides.push(img("example-17.png","neutral","Principle 2 &middot; Odd shapes, one is enough",
   "A board titled \"Use Odd Shapes To Make The Right Thing Pop\". The good row uses one distinct shape to spotlight the offer or call to action; the bad row crowds each ad with many shapes and badges, marked with red X marks and notes such as \"Too many shapes create clutter\".",
   "One shape spotlights, many shapes clutter.",
-  "Good row: a single distinct shape interrupts the pattern and points the eye at the offer or call to action, the odd-shape trick in action. Bad row: stacking shapes and badges everywhere creates noise, so nothing is special."));
+  "Good row: a single distinct shape interrupts the pattern and points the eye at the offer or call to action. Bad row: stacking shapes and badges everywhere creates noise, so nothing is special."));
 
-/* ===================== PRINCIPLE 3: Red, orange, yellow ===================== */
-slides.push({rule:3, step:"Principle 3 intro", title:"Principle 3: Red, orange, and yellow", html:
+/* ===================== PRINCIPLE 3: Red, Orange, and Yellow ===================== */
+slides.push({rule:3, step:"Principle 3 intro", title:"The Science of Red, Orange, and Yellow", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 3 of 5</div>' +
-    '<h2>The science of <em>red, orange, and yellow</em></h2>' +
-    '<p class="lead">These three are hardwired to grab attention because they trigger biological urgency. Each one carries a meaning the eye reads before the words.</p>' +
+    '<h2>The Science of <em>Red, Orange, and Yellow</em></h2>' +
+    '<p class="lead">Red, orange, and yellow are hardwired to grab attention because they trigger biological urgency.</p>' +
     '<div class="swatches">' +
-      '<div class="swatch red"><div class="sw-n">Red</div><div class="sw-d">Danger, excitement, stop: traffic lights, warning signs, blood, fire.</div></div>' +
-      '<div class="swatch orange"><div class="sw-n">Orange</div><div class="sw-d">Action, energy, enthusiasm: call-to-action buttons, fast food.</div></div>' +
-      '<div class="swatch yellow"><div class="sw-n">Yellow</div><div class="sw-d">Optimism, alertness, happiness: caution signs, taxis, emojis.</div></div>' +
+      '<div class="swatch red"><div class="sw-n">Red</div><div class="sw-d">Danger, excitement, STOP (traffic lights, warning signs, blood, fire).</div></div>' +
+      '<div class="swatch orange"><div class="sw-n">Orange</div><div class="sw-d">Action, energy, enthusiasm (CTA buttons, fast food branding).</div></div>' +
+      '<div class="swatch yellow"><div class="sw-n">Yellow</div><div class="sw-d">Optimism, alertness, happiness (caution signs, taxis, emojis).</div></div>' +
     '</div>' +
-    '<p class="lead">If you want clicks, conversions, and sales, do not be afraid to sacrifice brand colors for high-visibility colors that make people stop and look.</p>' +
+    '<p class="lead">If you want clicks, conversions, and sales, don\'t be afraid to sacrifice brand colors for high-contrast, high-visibility colors that ACTUALLY make people stop and look.</p>' +
   '</div>'});
 
 slides.push(img("example-16.png","neutral","Principle 3 &middot; Power colors introduced",
@@ -416,57 +412,57 @@ slides.push(img("example-16.png","neutral","Principle 3 &middot; Power colors in
 slides.push(img("example-18.png","neutral","Principle 3 &middot; Red, orange, yellow as accents",
   "A board titled \"Use Red, Orange and Yellow As Action Colors\". The good row uses warm accents on key words, offer flags, and call-to-action buttons; the bad row floods panels with warm color or puts it on low-priority elements, each bad panel marked with a red X.",
   "A little warm color goes a long way.",
-  "Good row: warm color marks the most important words and the button, so the eye snaps to them. Bad row: a full-color explosion, or color on minor details, weakens the message because nothing stands out."));
+  "Good row: warm color marks the most important words and the button, so the eye snaps to them. Bad row: a full-color explosion, or color on minor details, weakens the message."));
 
 slides.push(img("example-19.png","neutral","Principle 3 &middot; One or two warm pops",
   "A board headed \"Use Red, Orange and Yellow As Action Accents\". The good row keeps one or two warm pops on the headline and call to action; the bad row over-colors, adds a bright badge that steals focus, and crowds in extra accents, with per-panel \"Why it's wrong\" notes.",
   "One or two pops, not a wall.",
-  "Good row: one or two warm accents on the headline and call to action create a clear path. Bad row: too much warm color, or a loud badge competing with the message, and the eye scatters again."));
+  "Good row: one or two warm accents on the headline and call to action create a clear path. Bad row: too much warm color, or a loud badge competing with the message, and the eye scatters."));
 
-/* ===================== PRINCIPLE 4: Arrows & implied motion ===================== */
-slides.push({rule:4, step:"Principle 4 intro", title:"Principle 4: Arrows and implied motion", html:
+/* ===================== PRINCIPLE 4: Arrows & Implied Motion ===================== */
+slides.push({rule:4, step:"Principle 4 intro", title:"Arrows & Implied Motion: Directing the Eye", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 4 of 5</div>' +
-    '<h2>Arrows and motion <em>direct the eye</em></h2>' +
-    '<p class="lead">People are trained to follow arrows. Road signs, website buttons, and maps teach the brain to expect an arrow to say where to look or go. Put that to work in your image.</p>' +
+    '<h2>Arrows &amp; Implied Motion: <em>Directing the Eye</em></h2>' +
+    '<p class="lead">People are trained to follow arrows. Road signs, website buttons, maps; our brains expect arrows to tell us where to look or go. Use them to:</p>' +
     '<div class="kpis">' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Point at the message</span><span class="s">Direct attention to the headline, subheadline, or call to action.</span></span></div>' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Move the eye in sequence</span><span class="s">Headline, then subheadline, then call to action.</span></span></div>' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Give a clear path</span><span class="s">A path to follow keeps the viewer engaged instead of lost.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="s">Direct attention to your headline, subheadline, or CTA.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="s">Move the eye in a sequence (Headline, Subheadline, CTA).</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="s">Keep viewers engaged by giving their eyes a clear path to follow.</span></span></div>' +
     '</div>' +
   '</div>'});
 
-slides.push({rule:4, step:"Principle 4 story", title:"The pickpocket trick", html:
+slides.push({rule:4, step:"Principle 4 story", title:"The Pickpocket Trick (and Why It Works in Marketing)", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 4 of 5</div>' +
-    '<h2>The <em>pickpocket</em> trick</h2>' +
-    '<p class="lead">Pickpockets in Europe ask for directions while making a curved hand motion. The motion distracts the target\'s eye, which makes the theft easy. Magicians misdirect the same way.</p>' +
-    '<p class="lead">You can use this honestly in an ad with <b>curved or arching arrows</b> that lead the eye to key text, and <b>images that imply movement</b>, like a car with motion lines, a falling star, or a person running. The brain follows the implied motion on its own.</p>' +
-    '<div class="aside-card"><span class="tag">The example</span><p>A person walking <b>toward</b> the call to action pulls the eye there. A person walking <b>away</b> distracts and weakens the ad.</p></div>' +
+    '<h2>The Pickpocket Trick <em>(and Why It Works in Marketing)</em></h2>' +
+    '<p class="lead">Pickpockets in Europe often ask for directions while making a curved hand motion. This distracts the target\'s eye, making it easy to steal their wallet. Magicians use the SAME principle to misdirect audiences.</p>' +
+    '<p class="lead">You can ethically use this technique with curved or arching arrows that lead the eye to key text, and images that suggest movement: a car with motion lines, a star falling, a person running. The brain automatically follows the implied motion.</p>' +
+    '<div class="aside-card"><span class="tag">The example</span><p>A person walking toward the CTA pulls the eye along. Walking away distracts and weakens engagement.</p></div>' +
   '</div>'});
 
 slides.push(img("example-14.png","neutral","Principle 4 &middot; Motion that leads vs motion that scatters",
   "A combined board titled \"Use Motion To Guide Attention\". Good examples use arrows and a person moving toward the call to action; bad examples show motion pointing away or a blurred figure pulling the eye off the message, each marked with a red X and a \"Why it's wrong\" note.",
   "Direction is everything.",
-  "Good row: arrows and a body in motion run the eye from headline to call to action. Bad row: the motion exits the frame or competes with the copy, so attention drains off the ad instead of through it."));
+  "Good row: arrows and a body in motion run the eye from headline to call to action. Bad row: the motion exits the frame or competes with the copy, so attention drains off the ad."));
 
-slides.push(img("example-15.png","neutral","Principle 4 &middot; A second motion set",
+slides.push(img("example-15.png","neutral","Principle 4 &middot; Aim the motion like an arrow",
   "A board headed \"The 6 Rules Of High-Converting Ad Images\" with a good row where arrows guide the eye toward the call to action, and a bad row where heavy motion blur and arrows in every direction pull attention away.",
   "Aim the motion like an arrow.",
-  "Motion should act like an arrow toward your headline or call to action, not be sprayed in every direction. The blurred, scattered bad row shows what happens when it is overused: the eye finds no path."));
+  "Motion should act like an arrow toward your headline or call to action, not be sprayed in every direction. The blurred, scattered bad row shows what happens when it is overused."));
 
-/* ===================== PRINCIPLE 5: Hierarchy of attention ===================== */
-slides.push({rule:5, step:"Principle 5 intro", title:"Principle 5: The hierarchy of attention", html:
+/* ===================== PRINCIPLE 5: The Hierarchy of Attention ===================== */
+slides.push({rule:5, step:"Principle 5 intro", title:"The Hierarchy of Attention: Guiding the Viewer's Eye", html:
   '<div class="screen">' +
     '<div class="kicker">Principle 5 of 5</div>' +
-    '<h2>The hierarchy of attention: <em>guiding the eye</em></h2>' +
-    '<p class="lead">Your image should guide the eye in one order, top to bottom of importance. The subheadline is where you keep the What tight: one sentence, or a teaser plus three bullets at most, never a paragraph.</p>' +
+    '<h2>The Hierarchy of Attention: <em>Guiding the Viewer\'s Eye</em></h2>' +
+    '<p class="lead">Your image should guide the eye in this order:</p>' +
     '<div class="kpis">' +
-      '<div class="kpi"><span class="n">1</span><span><span class="b">Headline</span><span class="s">Big and bold, a benefit-driven or pain-focused statement. The Why.</span></span></div>' +
-      '<div class="kpi"><span class="n">2</span><span><span class="b">Subheadline</span><span class="s">Smaller supporting text that explains the what and the how. Keep it tight.</span></span></div>' +
-      '<div class="kpi"><span class="n">3</span><span><span class="b">Call to action</span><span class="s">The action step, with urgency and clarity. The How.</span></span></div>' +
+      '<div class="kpi"><span class="n">1</span><span><span class="b">Headline</span><span class="s">BIG, bold, benefit-driven or pain-focused statement.</span></span></div>' +
+      '<div class="kpi"><span class="n">2</span><span><span class="b">Subheadline</span><span class="s">Smaller, supporting text explaining what and how.</span></span></div>' +
+      '<div class="kpi"><span class="n">3</span><span><span class="b">CTA</span><span class="s">Action step with urgency and clarity.</span></span></div>' +
     '</div>' +
-    '<p class="lead">If your design does not follow this flow, people do not absorb the message in the right order.</p>' +
+    '<p class="lead">If your design doesn\'t follow this flow, people won\'t absorb the message in the right order.</p>' +
   '</div>'});
 
 slides.push({rule:5, step:"Principle 5 example", title:"The hierarchy in one ad", html:
@@ -474,11 +470,11 @@ slides.push({rule:5, step:"Principle 5 example", title:"The hierarchy in one ad"
     '<div class="kicker">Principle 5 of 5</div>' +
     '<h2>The hierarchy in <em>one ad</em></h2>' +
     '<div class="kpis">' +
-      '<div class="kpi"><span class="n">Why</span><span><span class="b">Headline</span><span class="s">"The Secret to Rapid Weight Loss."</span></span></div>' +
+      '<div class="kpi"><span class="n">Why</span><span><span class="b">Headline</span><span class="s">"The Secret to Rapid Weight Loss"</span></span></div>' +
       '<div class="kpi"><span class="n">What</span><span><span class="b">Subheadline</span><span class="s">"How a 5-minute morning hack melts fat without dieting."</span></span></div>' +
-      '<div class="kpi"><span class="n">How</span><span><span class="b">Call to action</span><span class="s">"Get the FREE guide now."</span></span></div>' +
+      '<div class="kpi"><span class="n">How</span><span><span class="b">CTA</span><span class="s">"Get the FREE guide now."</span></span></div>' +
     '</div>' +
-    '<div class="aside-card"><span class="tag">Bad design</span><p>If the call to action is too loud, people skip the value and do not act. If the headline is weak, they ignore the ad entirely.</p></div>' +
+    '<div class="aside-card"><span class="tag">Bad design</span><p>If the CTA is too loud, people skip the value and don\'t act. If the headline is weak, they ignore the ad entirely.</p></div>' +
   '</div>'});
 
 slides.push(img("example-01.png","right","Principle 5 &middot; The base layer",
@@ -498,7 +494,7 @@ slides.push(img("example-05.png","right","Principle 5 &middot; Problem-focused h
 
 slides.push(img("example-02.png","right","Principle 5 &middot; Same order, different layouts",
   "A four-panel grid showing the same size hierarchy arranged differently in each panel: headline biggest, offer second, call to action smallest, with the elements moved to different positions.",
-  "Same order, four layouts.",
+  "Same hierarchy, four layouts.",
   "Each panel moves the pieces around, yet the size order holds, so the eye lands on the headline first in all four. Layout is free as long as the sizing rule stays fixed."));
 
 slides.push(img("example-09.png","right","Principle 5 &middot; Hierarchy across niches",
@@ -524,46 +520,45 @@ slides.push(img("example-07.png","wrong","Principle 5 &middot; The offer swells 
 slides.push(img("example-08.png","right","Principle 5 &middot; The full stack, clean",
   "A four-panel grid of complete black-on-white ads with a problem headline, a tight offer with bullets, and a clear call to action such as \"Click Here To Download It Now\" and \"Comment DM To Get The Link\".",
   "Why, What, How, in order.",
-  "The headline leads, the offer stays tight, and the call to action names the exact step and how the thing arrives. This is the whole hierarchy working from top to bottom."));
+  "The headline leads, the offer stays tight, and the call to action names the exact step and how the thing arrives. This is the whole hierarchy working before any color is added."));
 
 /* ===================== THE RANT ===================== */
-slides.push({rule:0, step:"The Rant", title:"Why 99% of designers are clueless", html:
+slides.push({rule:0, step:"The Rant", title:"Why 99% of Designers Are Clueless", html:
   '<div class="screen">' +
-    '<div class="kicker">The rant</div>' +
-    '<h2>Why 99% of designers are <em>clueless</em></h2>' +
-    '<p class="lead">Most designers know nothing about marketing. They make pretty graphics that look good in a portfolio and do not convert. A good designer understands the trade.</p>' +
+    '<div class="kicker">The Rant</div>' +
+    '<h2>Why 99% of Designers Are <em>Clueless</em></h2>' +
+    '<p class="lead">Most designers know nothing about marketing. They make "pretty" graphics that look nice in a portfolio but don\'t convert. A good designer understands that:</p>' +
     '<div class="kpis">' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Ads are not art</span><span class="s">They are sales tools, and they are judged on sales.</span></span></div>' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Beauty does not matter</span><span class="s">Attention and clarity do.</span></span></div>' +
-      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Branding is secondary</span><span class="s">If it does not stop the scroll, it is a failure.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Ads are NOT art.</span><span class="s">They\'re sales tools.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Beauty doesn\'t matter.</span><span class="s">Attention and clarity do.</span></span></div>' +
+      '<div class="kpi"><span class="n">&#8226;</span><span><span class="b">Branding is secondary.</span><span class="s">If it doesn\'t stop the scroll, it\'s a failure.</span></span></div>' +
     '</div>' +
-    '<div class="aside-card"><span class="tag">The call</span><p>If a branding expert tells you not to use red, yellow, or contrast in top-of-funnel ads because it is off-brand, <b>fire them.</b> They are costing you money.</p></div>' +
+    '<div class="aside-card"><span class="tag">The call</span><p>If your "branding expert" ever tells you NOT to use red, yellow, or contrast in TOFU ads because it\'s off-brand, <b>fire them immediately. They\'re costing you money.</b></p></div>' +
   '</div>'});
 
 /* ===================== FINAL TAKEAWAY ===================== */
-slides.push({rule:0, step:"Final takeaway", title:"What a good thumbnail needs", html:
+slides.push({rule:0, step:"Final Takeaway", title:"What a GOOD Thumbnail Needs", html:
   '<div class="screen">' +
-    '<div class="kicker">Final takeaway</div>' +
-    '<h2>What a <em>good thumbnail</em> needs</h2>' +
-    '<p class="lead">The right build depends on whether you are making organic content or running an ad.</p>' +
+    '<div class="kicker">Final Takeaway</div>' +
+    '<h2>What a <em>GOOD</em> Thumbnail Needs</h2>' +
     '<div class="kpis">' +
-      '<div class="kpi"><span class="n">Organic</span><span><span class="b">YouTube, social, blogs</span><span class="s">A Stage 2 curiosity headline that teases a mystery, or a Stage 1 pain-based appeal that calls out an urgent problem, or one powerful headline that is short, punchy, and high contrast.</span></span></div>' +
-      '<div class="kpi"><span class="n">Ads</span><span><span class="b">Why, What, How</span><span class="s">Why is the benefit or pain point, What is the thing they get and how it solves the problem, How is the call to action that says exactly what to do.</span></span></div>' +
+      '<div class="kpi"><span class="n">Organic</span><span><span class="b">For organic content (YouTube, social, blogs)</span><span class="s">A Stage 2 curiosity headline (tease a mystery, don\'t reveal too much). OR a Stage 1 pain-based appeal (call out an urgent problem). OR just one powerful headline (short, punchy, HIGH contrast).</span></span></div>' +
+      '<div class="kpi"><span class="n">Ads</span><span><span class="b">For ads</span><span class="s">WHY: the benefit or pain point. WHAT: what they get and how it solves the problem. HOW: the CTA that tells them EXACTLY what to do.</span></span></div>' +
     '</div>' +
-    '<div class="aside-card"><span class="tag">The one line</span><p>If your ad is not instantly clear, it is a dud, however pretty it looks. <b>Pretty does not sell. Psychology sells.</b></p></div>' +
+    '<div class="aside-card"><span class="tag">The close</span><p>If your ad isn\'t instantly clear, it\'s a dud. No matter how pretty it looks. <b>Pretty doesn\'t sell. Psychology sells.</b></p></div>' +
   '</div>'});
 
-slides.push(img("example-20.png","neutral","Final takeaway &middot; All five, together",
+slides.push(img("example-20.png","neutral","All five, together",
   "A master summary board titled \"The 7 Rules Of High-Converting Ad Images\", listing the rules across the top with icons, then good and bad rows demonstrating power colors and odd shapes used as accents versus overused.",
-  "The whole set on one image.",
-  "The principles laid out across the top with good and bad rows underneath. Follow them together and the eye moves through the message in the order you chose, from the Why to the What to the How."));
+  "The whole stack on one image.",
+  "All the rules in order, with good and bad rows underneath. Follow them together and the eye moves from Why to What to How without a wrong turn."));
 
 /* ===================== PROMPT SLIDE ===================== */
-slides.push({rule:0, step:"Copy-paste prompt", title:"The ad image copy prompt", html:
+slides.push({rule:0, step:"Copy-paste prompt", title:"The Ad Image Copy Prompt", html:
   '<div class="screen">' +
     '<div class="kicker">Companion tool</div>' +
-    '<h2>The <em>ad image copy</em> prompt</h2>' +
-    '<p class="lead">This prompt writes ad copy to the Why, What, How formula in your audience\'s own words. It gives you a symptom version and a benefit version, counts the characters against the limits, and waits for your approval before generating any image.</p>' +
+    '<h2>The <em>Ad Image Copy</em> Prompt</h2>' +
+    '<p class="lead">Paste this into ChatGPT, fill in your offer, and it writes ad copy to the Why, What, How formula in your audience\'s own words.</p>' +
     '<div class="top-prompt">' +
       '<p class="top-prompt-note">Open it, copy it, paste it into ChatGPT, then fill in your offer.</p>' +
       '<button class="prompt-open-btn" id="slidePrompt">Open the full prompt</button>' +
@@ -572,11 +567,11 @@ slides.push({rule:0, step:"Copy-paste prompt", title:"The ad image copy prompt",
   '</div>'});
 
 /* ===================== CLOSING / CTA ===================== */
-slides.push({rule:0, step:"Close", title:"Pretty does not sell", html:
+slides.push({rule:0, step:"Close", title:"Pretty doesn't sell. Psychology sells.", html:
   '<div class="screen cta-screen">' +
     '<div class="kicker">The takeaway</div>' +
-    '<h1>Stop the scroll,<br>then <em>guide the eye.</em></h1>' +
-    '<p class="big-rule">Use these five principles to make the image demand attention and send the eye exactly where you want it. <span class="pop">Pretty does not sell. Psychology sells.</span></p>' +
+    '<h1>Pretty doesn\'t sell.<br><em>Psychology sells.</em></h1>' +
+    '<p class="big-rule">Now, go implement this and watch your ad engagement and your traffic explode.</p>' +
     '<div class="title-mark"><span class="dot"></span> The Quiet Authority &middot; vqsuccess.com</div>' +
   '</div>'});
 
@@ -711,7 +706,7 @@ stage.addEventListener("touchend", function(e){
 /* ---- quick links -------------------------------------------------------- */
 document.getElementById("homeBtn").addEventListener("click", function(){ render(0); });
 document.getElementById("summaryBtn").addEventListener("click", function(){
-  render(indexByStep("Summary"));
+  render(indexByStep("Final Takeaway"));
 });
 document.getElementById("promptBtn").addEventListener("click", openPrompt);
 
@@ -732,16 +727,16 @@ var mapList = document.getElementById("mapList");
 function buildMap(){
   var html = "";
   var ruleTitles = {
-    1:["Human faces","The eye finds faces fast; aim them at the headline or call to action."],
-    2:["Contrasts: shape and color","Stand out from the noise, including the odd-shape trick."],
-    3:["Red, orange, and yellow","Power colors trigger urgency; use them as accents."],
-    4:["Arrows and implied motion","Direct the eye and give it a clear path to follow."],
-    5:["The hierarchy of attention","Headline, then subheadline, then call to action."]
+    1:["Human Faces","The Ultimate Attention Magnet."],
+    2:["Contrasts: Shape & Color","Over branding nonsense, plus the odd-shape trick."],
+    3:["Red, Orange, and Yellow","Power colors that trigger biological urgency."],
+    4:["Arrows & Implied Motion","Directing the eye, plus the pickpocket trick."],
+    5:["The Hierarchy of Attention","Headline, then subheadline, then CTA."]
   };
   // front matter
   html += '<div class="map-group">Open here</div>';
   html += mapItem(0, "&#9733;", "Title", "Eyeball-grabbing images.");
-  html += mapItem(indexByStep("Why this works"), "&#9733;", "Intro", "Most marketers get it dead wrong.");
+  html += mapItem(indexByStep("The big idea"), "&#9733;", "Intro", "Most marketers get it DEAD WRONG.");
   // principles: link to each principle's intro slide
   html += '<div class="map-group">The 5 principles</div>';
   for(var r=1;r<=5;r++){
@@ -751,9 +746,9 @@ function buildMap(){
   // back matter
   html += '<div class="map-group">Wrap up</div>';
   html += mapItem(indexByStep("The Rant"), "&#9733;", "The Rant", "Why 99% of designers are clueless.");
-  html += mapItem(indexByStep("Final takeaway"), "&#9733;", "Final takeaway", "What a good thumbnail needs.");
+  html += mapItem(indexByStep("Final Takeaway"), "&#9733;", "Final Takeaway", "What a GOOD thumbnail needs.");
   html += mapItem(indexByStep("Copy-paste prompt"), "&#9733;", "The prompt", "The ad image copy prompt.");
-  html += mapItem(indexByStep("Close"), "&#9733;", "Close", "Stop the scroll, then guide the eye.");
+  html += mapItem(indexByStep("Close"), "&#9733;", "Close", "Pretty doesn't sell. Psychology sells.");
   mapList.innerHTML = html;
 
   // bind
